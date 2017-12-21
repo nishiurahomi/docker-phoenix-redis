@@ -35,12 +35,6 @@ RUN mix local.hex --force && \
     mix local.rebar --force && \
     mix hex.info
 
-# change locale
-RUN apt-get install -y locales && \
-    locale-gen ja_JP.UTF-8 && \
-    update-locale LANG=ja_JP.UTF-8 && \
-    . /etc/default/locale && \
-
 EXPOSE 4002
 
 CMD ["sh", "-c", "mix deps.get && mix phoenix.server"]
