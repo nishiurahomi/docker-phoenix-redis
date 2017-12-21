@@ -15,7 +15,6 @@ RUN set -x && \
   ssh \
   gzip \
   g++ \
-  redis-server \
   ca-certificates \
   curl && \
   rm -rf /var/lib/apt/lists/*
